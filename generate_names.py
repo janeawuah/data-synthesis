@@ -39,6 +39,8 @@ gender = input("What gender should this name be?, f or m: ")
 age = int(input("Please enter their age: "))
 country = input("Please enter a country: ")
 
+# gender, age, country = input("Please what the gender, age and country of user: ").split()
+
 print("Name: ", get_name(gender) )
 print("Age range: ", nearest_ten_down(age) , " - " , nearest_ten_up(age))
 print("Address: ", random.randint(1,200), " ", get_address(country), " Street")
