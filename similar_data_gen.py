@@ -33,7 +33,11 @@ select_column = pd.read_csv('user_data.csv', skipinitialspace=True, usecols=fiel
 
 
 for gender in select_column.gender:
-    print(get_name(gender))
+    name = get_name(gender)
+    email = name.lower()+'@gmail.com'
+    print(name, end =' ')
+    print(email, end=' ')
+    print(gender)
 
 
 
