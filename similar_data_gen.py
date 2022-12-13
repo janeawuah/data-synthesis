@@ -35,7 +35,7 @@ select_column = pd.read_csv('user_data.csv', skipinitialspace=True, usecols=fiel
 # print(select_column.gender)
 
 for date in select_column.date_of_birth:
-    print((date[-4:]).dtype)
+    print(date[-4:])
 
 
 # for gender in select_column.gender:
