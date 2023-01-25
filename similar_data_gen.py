@@ -34,18 +34,18 @@ fields = ['gender', 'date_of_birth', 'country']
 select_column = pd.read_csv('user_data.csv', skipinitialspace=True, usecols=fields)
 # print(select_column.gender)
 
-for date in select_column.date_of_birth:
-    print((date[-4:]).dtype)
+# for date in select_column.date_of_birth:
+#     print(date[-4:])
 
 
-# for gender in select_column.gender:
-#     name = get_name(gender)
-#     lname = get_lastname()
-#     email = name.lower()+'@gmail.com'
-#     print(name, end =' ')
-#     print(lname, end='  ')
-#     print(email, end='   ')
-#     print(gender)
+for gender in select_column.gender:
+    name = get_name(gender)
+    lname = get_lastname()
+    email = name.lower()+'.' + lname.lower()+ '@gmail.com'
+    print(name, end =' ')
+    print(lname, end='  ')
+    print(email, end='   ')
+    print(gender)
 
 
 
