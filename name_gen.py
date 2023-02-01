@@ -1,5 +1,7 @@
 
 import random
+# import pandas as pd
+
 female_names = ['Ama','Efia','Adjoa']
 male_names = ['Kojo','Yaw','Kofi']
 last_names = ['Osei', "Poku", "Oware", "Mensah"]
@@ -51,16 +53,29 @@ def get_email(name):
     name_combination = mail_format.format(first = fname, last = lname, f = first_initial, l= last_initial)
     return (name_combination+ mail_provider).lower()
 
-
+def get_randomline(file_name):
+    lines = open(file_name).read().splitlines()
+    return random.choice(lines)
 
 def main():
-    gender = get_gender()
+    # gender = get_gender()
+    # name = get_name(gender)
+    # email = get_email(name)
+    # print(name)
     # print(gender)
-    name = get_name(gender)
-    email = get_email(name)
-    print(name)
-    print(gender)
-    print(email)
+    # print(email)
+    # f = open("providers.txt","r")
+    # print(f.read())
+    # f.close()
+    # print(get_randomline("providers.txt"))
+    # with open('providers.txt') as f:
+    #     emailos = f.readlines()
+    
+    # print(emailos(random.randrange(len(emailos))))
+
+
+    emailos = open('providers.txt').read().splitlines()
+    print(random.choice(emailos))
 
 
 
